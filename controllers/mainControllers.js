@@ -1,4 +1,4 @@
-const path = requiere("path")
+const path = require("path")
 
 const controladorPrincipal =  {
     home: (req, res)=>{
@@ -8,5 +8,5 @@ const controladorPrincipal =  {
     about: (req, res)=>{
         res.sendfile(path.join(__dirname,"../views/about.html"))
     },
-}
+    }
 module.exports = controladorPrincipal;
