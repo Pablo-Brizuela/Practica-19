@@ -1,9 +1,12 @@
-const controlador = {
+const path = requiere("path")
 
-home:  (req,res)=>{
-    res.sendFile(__dirname + '/views/home.html');
-});
+const controladorPrincipal =  {
+    home: (req, res)=>{
+        res.sendfile(path.join(__dirname,"../views/home.html"))
+    },
 
+    about: (req, res)=>{
+        res.sendfile(path.join(__dirname,"../views/about.html"))
+    },
 }
-
-module.exports = controlador;
+module.exports = controladorPrincipal;
